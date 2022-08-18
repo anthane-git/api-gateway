@@ -6,7 +6,7 @@ services:
 
     - name: client-list
       prefix: '/client-list-api'
-      target: 'http://localhost:4500'
+      target: 'http://127.0.0.1:4500'
 
   exclusions:
     - '/identity-api'
