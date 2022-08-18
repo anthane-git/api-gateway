@@ -1,0 +1,5 @@
+# Dependencies
+node_modules/
+
+# Temp Files
+*.cache

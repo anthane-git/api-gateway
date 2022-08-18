@@ -1,0 +1,4 @@
+routes:
+  - name: "service"
+    prefix: "/service"
+    target: "http://127.0.0.1:3000"
