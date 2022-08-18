@@ -1,35 +1,46 @@
 import gateway from "fast-gateway";
-import restana from "restana";
-import { load } from "js-yaml";
-import { readFileSync } from "fs";
 import jwksClient from "jwks-rsa";
+import { readFileSync } from "fs";
 import { expressjwt } from "express-jwt";
+import { config } from "dotenv";
+import { load } from "js-yaml";
+import "dotenv/config";
 
-try {
-  const fileContents = readFileSync("./config.yml", "utf8");
+config({ path: `.env.${process.env.NODE_ENV}` });
 
-  const data = load(fileContents);
+const fileContents = readFileSync("./config.yml", "utf8");
 
-  const server = gateway(data);
-  server.start(8080);
-} catch (err) {
-  console.log(err);
-}
+const { routes } = load(fileContents);
 
-const service = restana();
+const server = gateway({
+  restana: {},
+  middlewares: [
+    expressjwt({
+      secret: jwksClient.expressJwtSecret({
+        jwksUri: "http://localhost:5500/v1/auth/.well-known/jwks.json",
+        rateLimit: true,
+        timeout: 18 * 100 * 1000,
+        cache: true,
+      }),
+      algorithms: ["RS256"],
+    }).unless({ path: ["/", "/favicon.ico"] }),
+  ],
+  routes,
+});
 
-service.use(
-  expressjwt({
-    secret: jwksClient.expressJwtSecret({
-      jwksUri: "http://localhost:5500/v1/auth/.well-known/jwks.json",
-      rateLimit: true,
-      timeout: 30000,
-      cache: true,
-    }),
-    algorithms: ["RS256"],
-  })
-);
+server.get("/", (_, res) => {
+  const endpoints = [];
 
-service.get("/service/get", (req, res) => res.send("Hello World!"));
+  routes.map(({ name, prefix }) => {
+    endpoints.push({
+      name,
+      host: `${process.env.HOST}${
+        process.env.PORT && `:${process.env.PORT}`
+      }${prefix}`,
+    });
+  });
 
-service.start(3000);
+  res.send(endpoints);
+});
+
+server.start(process.env.PORT || 3000);

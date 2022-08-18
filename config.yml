@@ -1,4 +1,8 @@
 routes:
-  - name: "service"
-    prefix: "/service"
-    target: "http://127.0.0.1:3000"
+  - name: identity-provider
+    prefix: "/identity-api"
+    target: "http://localhost:5500"
+
+  - name: client-list
+    prefix: "/client-list-api"
+    target: "http://localhost:4500"
