@@ -1,23 +1,26 @@
 {
-  "name": "gateway",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production node main",
-    "dev": "NODE_ENV=development nodemon -L main",
-    "container:up": "docker-compose up -d",
-    "container:down": "docker-compose up -d"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^16.0.1",
-    "express-jwt": "^7.7.5",
-    "fast-gateway": "^3.4.0",
-    "js-yaml": "^4.1.0",
-    "jwks-rsa": "^2.1.4"
-  }
+	"name": "gateway",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "NODE_ENV=production node main",
+		"dev": "NODE_ENV=development nodemon -L main",
+		"container:up": "docker-compose up",
+		"container:down": "docker-compose down"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"dotenv": "^16.0.1",
+		"express-jwt": "^7.7.5",
+		"fast-gateway": "^3.4.0",
+		"js-yaml": "^4.1.0",
+		"jwks-rsa": "^2.1.4"
+	},
+	"devDependencies": {
+		"eslint": "^8.22.0"
+	}
 }
