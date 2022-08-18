@@ -1,12 +1,8 @@
 services:
   routes:
-    - name: identity-provider
-      prefix: '/identity-api'
-      target: 'http://127.0.0.1:5500'
-
     - name: client-list
       prefix: '/client-list-api'
-      target: 'http://127.0.0.1:4500'
+      target: 'http://localhost:4500'
 
   exclusions:
     - '/identity-api'

@@ -33,5 +33,5 @@ export const server = config => {
 
 	indexRoute(app, routes);
 
-	app.start(process.env.PORT || 3000);
+	app.start(process.env.PORT);
 };

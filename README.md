@@ -9,9 +9,17 @@ Specify proxy routes in `./config.yml`.
 ```yaml
 routes:
   - name: service-name
-    prefix: "/service-prefix"
-    target: "http://localhost:6969"
+    prefix: '/service-prefix'
+    target: 'http://localhost:6969'
+
+exclusions:
+  - '/identity-api'
+  - '/favicon.ico'
+  - '/'
 ```
+
+`routes` - proxy routes with authentication
+`exclusions` - authentication exclusions
 
 ## Inside the project root, you can run some built-in commands:
 
@@ -19,10 +27,6 @@ routes:
 
 Runs the app in production mode.<br>
 
-### `npm run container:up`
+### `npm run dev`
 
 Runs the app in development mode.<br>
-
-### `npm run container:down`
-
-stops the running application containers.<br>

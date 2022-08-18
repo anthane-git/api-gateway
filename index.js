@@ -1,5 +1,5 @@
 import { readFileSync } from 'fs';
-import { server } from './src/index.js';
+import { server } from './src/server.js';
 import { config } from 'dotenv';
 import 'dotenv/config';
 

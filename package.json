@@ -1,15 +1,13 @@
 {
 	"name": "gateway",
 	"version": "1.0.0",
-	"description": "",
+	"description": "API gateway service",
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "NODE_ENV=production node main",
-		"dev": "NODE_ENV=development nodemon -L main",
-		"container:up": "docker-compose up",
-		"container:down": "docker-compose down"
+		"start": "NODE_ENV=production node index.js",
+		"dev": "NODE_ENV=development nodemon main"
 	},
 	"author": "",
 	"license": "ISC",
