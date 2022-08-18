@@ -12,3 +12,17 @@ routes:
     prefix: "/service-prefix"
     target: "http://localhost:6969"
 ```
+
+## Inside the project root, you can run some built-in commands:
+
+### `npm start`
+
+Runs the app in production mode.<br>
+
+### `npm run container:up`
+
+Runs the app in development mode.<br>
+
+### `npm run container:down`
+
+stops the running application containers.<br>
