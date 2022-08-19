@@ -12,6 +12,9 @@ routes:
     prefix: '/service-prefix'
     target: 'http://localhost:6969'
 
+cors:
+  - 'http://localhost:6000'
+
 exclusions:
   - '/identity-api'
   - '/favicon.ico'
