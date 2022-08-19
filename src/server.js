@@ -8,14 +8,14 @@ import indexRoute from './routes.js';
 
 export const server = config => {
 	const {
-		services: { routes, exclusions },
+		services: { routes, exclusions, cors: origin },
 	} = load(config);
 
 	const app = fastGateway({
 		restana: {},
 		middlewares: [
 			cors({
-				origin: ['http://localhost:4000'],
+				origin,
 				credentials: true,
 			}),
 			expressjwt({

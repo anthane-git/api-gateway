@@ -4,6 +4,9 @@ services:
       prefix: '/client-list-api'
       target: 'http://localhost:4500'
 
+  cors:
+    - 'http://localhost:4000'
+
   exclusions:
     - '/identity-api'
     - '/favicon.ico'
