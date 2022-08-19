@@ -21,8 +21,9 @@ exclusions:
   - '/'
 ```
 
-`routes` - proxy routes with authentication
-`exclusions` - authentication exclusions
+`routes` - service url to proxy (w/authentication).
+`cors` - list of origins to enable cors.
+`exclusions` - paths to exclude authentication.
 
 ## Inside the project root, you can run some built-in commands:
 
