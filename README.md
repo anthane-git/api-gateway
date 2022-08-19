@@ -25,12 +25,12 @@ exclusions:
 `cors` - list of origins to enable cors.
 `exclusions` - paths to exclude authentication.
 
-## Inside the project root, you can run some built-in commands:
+### Commands
 
-### `npm start`
+#### `npm start`
 
 Runs the app in production mode.<br>
 
-### `npm run dev`
+#### `npm run dev`
 
 Runs the app in development mode.<br>
