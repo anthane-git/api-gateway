@@ -8,6 +8,5 @@ services:
     - 'http://localhost:4000'
 
   exclusions:
-    - '/identity-api'
     - '/favicon.ico'
     - '/'
