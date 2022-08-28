@@ -8,3 +8,5 @@ config({ path: `.env.${process.env.NODE_ENV}` });
 const rawConfig = readFileSync('./config.yml', 'utf8');
 
 server(rawConfig);
+
+console.log('restana initialized');
