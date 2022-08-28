@@ -34,4 +34,6 @@ export const server = config => {
 	indexRoute(app, routes);
 
 	app.start(process.env.PORT);
+
+	console.log('API Gateway Is Running');
 };
