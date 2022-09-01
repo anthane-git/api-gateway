@@ -1,5 +1,9 @@
 # API Gateway
 
+[![Restana](https://img.shields.io/badge/Restana-%23000000.svg?style=for-the-badge&logo=FastAPI&logoColor=white)](https://restana.21no.de/)
+[![Node](https://img.shields.io/badge/nodeJS-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Javascript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/)
+
 This service is scaffolded on Restana which is a super fast, minimalist framework.
 
 ## Configuring Proxies

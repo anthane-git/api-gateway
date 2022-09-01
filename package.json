@@ -9,7 +9,7 @@
 		"start": "NODE_ENV=production node index.js",
 		"dev": "NODE_ENV=development nodemon main"
 	},
-	"author": "",
+	"author": "BlazeIsClone",
 	"license": "ISC",
 	"dependencies": {
 		"cors": "^2.8.5",
