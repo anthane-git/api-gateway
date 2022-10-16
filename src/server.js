@@ -32,7 +32,7 @@ export const server = config => {
 	});
 
 	indexRoute(app, routes);
-	app.start(process.env.PORT, '0.0.0.0');
+	app.start(process.env.PORT);
 
 	console.log(`Running on http://localhost:${process.env.PORT}`);
 };

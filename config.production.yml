@@ -1,0 +1,12 @@
+services:
+  routes:
+    - name: client-list
+      prefix: "/client-list-api"
+      target: "https://client-list-api.blazeclone.xyz"
+
+  cors:
+    - "https://client-list.blazeclone.xyz"
+
+  exclusions:
+    - "/favicon.ico"
+    - "/"

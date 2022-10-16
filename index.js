@@ -5,6 +5,6 @@ import 'dotenv/config';
 
 config({ path: `.env.${process.env.NODE_ENV}` });
 
-const rawConfig = readFileSync('./config.yml', 'utf8');
+const rawConfig = readFileSync(`./config.${process.env.NODE_ENV}.yml`, 'utf8');
 
 server(rawConfig);
