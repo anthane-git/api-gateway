@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  nodejs:
+    image: node
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ag-nodejs
+    ports:
+      - 8080:8080
+    volumes:
+      - ./:/app
+    restart: always
+    stdin_open: true
+    tty: true
