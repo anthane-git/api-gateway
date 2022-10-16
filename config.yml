@@ -2,10 +2,11 @@ services:
   routes:
     - name: client-list
       prefix: '/client-list-api'
-      target: 'http://localhost:4500'
+      target: 'https://client-list-api.blazeclone.xyz'
 
   cors:
     - 'http://localhost:4000'
+    - 'https://client-list.blazeclone.xyz'
 
   exclusions:
     - '/favicon.ico'
